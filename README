@@ -1,0 +1,13 @@
+prefixdistro is OpenEmbedded layer to produce a distribution completely
+rooted with arbitrary filesystem prefix, intended to run alongside
+pre-existing system.
+
+Requirements:
+
+ * Completely relocatable, this includes not only things like
+   /etc/hosts and /etc/resolv.conf, but even /dev/log.
+ * Should be able to run without root privileges.
+ * Should be easy to boostrap via package manager.
+ * Should have simplified package dependencies if makes sense
+   (for example, busybox package should not pull daemons).
+ * Should have simplified/streamlines service architecture.
