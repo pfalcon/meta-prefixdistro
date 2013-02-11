@@ -11,3 +11,18 @@ Requirements:
  * Should have simplified package dependencies if makes sense
    (for example, busybox package should not pull daemons).
  * Should have simplified/streamlines service architecture.
+
+This layer depends on:
+
+URI: git://github.com/pfalcon/oe-core.git
+branch: obey-prefixes
+revision: HEAD
+
+Quick start:
+
+git clone git://github.com/pfalcon/oe-core.git
+git co obey-prefixes
+git clone git://git.openembedded.org/bitbake.git
+git clone git://github.com/pfalcon/meta-prefixdistro.git
+. oe-init-build-env
+bitbake busybox
